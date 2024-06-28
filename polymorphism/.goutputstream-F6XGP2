@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+class complex {
+int real;
+int img ;
+public:
+complex(){}
+complex(int real , int img )
+{
+this->real=real;
+this->img=img;
+}
+void display(void)
+{
+cout<<real;
+cout<<img;
+}
+complex operator-(void)
+{
+complex t;
+t.real=-real;
+t.img=-img;
+return t;
+}
+};
+int main ()
+{
+complex c(2,3);
+complex c1=-c;
+c1.display();
+return 0;
+}
