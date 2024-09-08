@@ -1,6 +1,7 @@
 #include<iostream>
 using namespace std;
-template <typename T>
+////////////////////////////////////////////////////////////////////////////////////
+template <typename T , typename T1>
 class student {
 T marks ;
 T subject;
@@ -12,6 +13,7 @@ this->subject=subject;
 }
 void percentage(void);
 };
+/////////////////////////////////////////////////////////////
 template<typename T>
 class teacher {
 T age;
@@ -20,8 +22,8 @@ teacher(T x):age(x){}
 void display(void);
 };
 //When defining member functions outside the class definition, you need to specify that these functions are part of a template class. This is done by repeating the template parameters:
-template <typename T>
-void student<T> :: percentage(void)
+template <typename a , typename b>
+void student<a ,b> :: percentage(void)
 {
 cout<<marks/subject<<endl;
 }
@@ -33,7 +35,7 @@ cout<<age<<endl<<papa<<endl;
 }
 int main () 
 {
-student<float > s ;
+student<float ,int > s ;
 s.setData(450,67);
 s.percentage();
 teacher<int> t(5);

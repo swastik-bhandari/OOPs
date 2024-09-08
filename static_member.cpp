@@ -13,11 +13,14 @@ void display()
 cout<<marks<<endl;
 cout<<count<<endl;
 }
-static void increment (void)
-{
-count++;
-}
+static void increment (void);
 };
+ void student :: increment (void)
+{
+count ++;
+cout<<count;
+cout<<"hello world ";
+}
 int student :: count ; //defination, memory is allocated in data segment .
 
 int main ()

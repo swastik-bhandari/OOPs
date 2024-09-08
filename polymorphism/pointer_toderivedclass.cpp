@@ -5,7 +5,7 @@ public:
 int tyres ;
 string color;
 public:
-void set_data(int x , string y)
+ void set_data(int x , string y)
 {
 tyres=x;
 color=y;
@@ -49,8 +49,14 @@ toyota t;
 car *ptr;
 ptr=&t;
 ptr->set_data(5 , "swastik");
-((toyota *)ptr)->temp=7;
-((toyota *)ptr)->get_data();
+//((toyota *)ptr)->temp=7;
+//((toyota *)ptr)->get_data();
+toyota *ptrderived;
+ptrderived=static_cast<toyota * >(ptr);
+
+ptrderived->get_data();
+
+
 return 0;
 }
 

@@ -25,7 +25,20 @@ int main ()
 subclass c(4);
 superclass *ptr;
 ptr=&c;
+//using c style cast
 //((subclass *)ptr)->display();
+//using c++ style cast 
+// static_cast<dog*>(ptr)->makesound();
+/*// Using dynamic_cast to cast base class pointer to derived class pointer
+    dog *d_ptr = dynamic_cast<dog*>(ptr);
+    if (d_ptr) {
+        d_ptr->makesound(); // This works correctly because ptr actually points to a dog object
+    } else {
+        cout << "Cast failed" << endl;
+    }
+*/
+//static_cast: It converts the pointer type without any runtime checks. Use it when you are certain about the types and know the cast is safe.
+//dynamic_cast: It converts the pointer type with runtime checks. If the conversion is not possible, it returns nullptr for pointers, ensuring that the program can handle such cases gracefully.
 ptr->display();
 return 0;
 }

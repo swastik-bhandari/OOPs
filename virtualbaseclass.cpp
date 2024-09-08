@@ -4,10 +4,6 @@ using namespace std;
 class A {
 public:
 int a ; 
-void set_data( int x)
-{
-a=x;
-}
 };
 class B : virtual public A {
 public:

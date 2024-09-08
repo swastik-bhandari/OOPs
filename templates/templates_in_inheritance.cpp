@@ -1,5 +1,6 @@
 #include<iostream>
 using namespace std;
+////////////////////////////////////////////////////////////////////////////////////
 template<class T>
 class animal {
 protected:
@@ -7,11 +8,12 @@ T legs;
 public:
 animal(T x):legs(x){}
 };
+///////////////////////////////////////////////////////////////////////////////////////////
 template<typename T1 , class T>
 class human :public animal<T1>{
 T iq;
 public:
-human(T x , T1 y):animal<T1>(y){
+human(T1 x , T y):animal<T1>(x){
 iq=x;
 }
 void getData(void)

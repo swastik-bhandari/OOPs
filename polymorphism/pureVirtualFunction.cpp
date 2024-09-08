@@ -2,7 +2,7 @@
 using namespace std;
 class animal {
 public:
-virtual void makesound(void){}// pure virtual function
+virtual void makesound(void)=0;// pure virtual function
 };
 class dog : public animal{
 public:
@@ -20,7 +20,6 @@ cout<<"meow"<<endl;
 };
 int main ()
 { 
-animal a;
 animal *ptr[2];
 dog d; 
 cat c;

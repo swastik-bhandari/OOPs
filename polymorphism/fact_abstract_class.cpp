@@ -9,13 +9,15 @@ public:
 };// as it does not implement makesound , so this class remains abstract . it is abstract derived class .
 class dog:public animal{
 //implementation of pure virtual function .
-void makesound(void)
+void makesound(void) override 
 {
 cout<<"bark"<<endl;
 }
 };
 int main ()
 {
-animal *ptr;
+dog d;
+animal *ptr=&d;
+ptr->makesound();
 return 0;
 }

@@ -1,42 +1,22 @@
 #include<iostream>
 using namespace std;
-class base{
-int data1 ;
+
+class base {
 public:
-int data2;
-void setdata1(int);
-void setdata2(int);
+ virtual void display(void) =0;
 };
-class derived:public base{
-int data3;
+class derived : public base {
 public:
-void process(void);
-void display(void);
+void display(void) {
+cout<<"derived class display function is invoked " <<endl;
+}
 };
+
 int main ()
 {
-derived dev;
-dev.setdata1(2);
-dev.setdata2(3);
-dev.process();
-dev.display();
+base *b=new derived ();
+
+//((derived *)b)->display();
+b->display();
 return 0;
 }
-void base :: setdata1(int x)
-{
-data1=x;
-}
-void base :: setdata2(int x)
-{
-data2=x;
-}
-void derived :: process (void)
-{
-data3=data2*3;
-}
-void derived :: display(void)
-{
-cout<<data3;
-}
-
-
